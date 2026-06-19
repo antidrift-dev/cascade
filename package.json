@@ -1,0 +1,30 @@
+{
+  "name": "@antidrift/cascade",
+  "version": "0.1.0",
+  "description": "Provider-chained isomorphic data layer for Cloudflare Workers + browser",
+  "type": "module",
+  "exports": {
+    ".":                  "./src/index.ts",
+    "./core":             "./src/core/index.ts",
+    "./providers/cf-cache":  "./src/providers/cf-cache.ts",
+    "./providers/d1":     "./src/providers/d1.ts",
+    "./providers/kv":     "./src/providers/kv.ts",
+    "./providers/indexeddb": "./src/providers/indexeddb.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250205.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0",
+    "dexie": "^4.0.0"
+  },
+  "peerDependencies": {
+    "dexie": "^4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "dexie": { "optional": true }
+  }
+}
