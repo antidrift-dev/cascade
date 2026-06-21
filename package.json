@@ -12,14 +12,16 @@
     "./providers/indexeddb": { "types": "./dist/providers/indexeddb.d.ts",    "import": "./dist/providers/indexeddb.js" }
   },
   "scripts": {
-    "build": "tsup",
+    "build": "tsc",
+    "prepare": "npm run build",
     "typecheck": "tsc --noEmit",
     "test": "vitest run"
   },
-  "devDependencies": {
+  "dependencies": {
     "@cloudflare/workers-types": "^4.20250205.0",
-    "tsup": "^8.0.0",
-    "typescript": "^5.4.0",
+    "typescript": "^5.4.0"
+  },
+  "devDependencies": {
     "vitest": "^2.0.0",
     "dexie": "^4.0.0"
   },
