@@ -1,7 +1,7 @@
 import type { Executor, QueryState, WriteState, UpdateState, Stats, Queryable } from '../executor.js';
 import type { TableDef } from '../schema.js';
 
-const INSERT_BATCH = 50;
+const INSERT_BATCH = 10;
 
 export class SqlExecutor implements Executor {
   constructor(private readonly d1: Queryable) {}
